@@ -18,6 +18,18 @@ body {
   align-items: center;
   padding: 18px;
   border-bottom: 1px solid #1f1f1f;
+  animation: slideInDown 4s ease-out forwards;
+}
+
+@keyframes slideInDown {
+  0%{
+    transform: translateX(-400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 .navbar span {
   color: whitesmoke;
@@ -38,6 +50,10 @@ body {
   text-decoration: none;
   color: #ffffff;
   font-size: 14px;
+}
+
+.navbar nav a:hover{
+    background: #e65c00;
 }
 
 /* HERO */
@@ -68,8 +84,26 @@ body {
   background-color: black;
   position: relative;
   overflow: hidden;
-  box-shadow: 2px 2px 55px rgb(255, 106, 0);
+  box-shadow: 2px 2px 20px rgb(255, 106, 0);
+  animation: slideInLeft 8s ease-out forwards;
 }
+
+@keyframes slideInLeft {
+  0%{
+    transform: translateX(-400px);
+    opacity: 0;
+  }
+  50%{
+    transform: translatey(200px);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
 .imgg{
   width: 100%;
   height: 100%;
@@ -104,43 +138,50 @@ body {
   margin-right: 222px;
 }
 
-.about-image{
-  height: 200px;
-  width: 200px;
-  margin-left: 200px;
-  border-radius: 50%;
-  background-color: black;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 2px 2px 55px rgb(255, 106, 0);}
+
 .about-imgg{
   width: 100%;
   height: 100%;
   border-radius: 0%;
   position: absolute;
   top: 10px;
+  overflow: hidden;
   }
 
-@media ( max-width: 430px){
-    .about-image{
-        position: absolute;
-        right: 20px;
-        bottom: 50px;
-    }   
-    .about-imgg{
-        position: absolute;
-        top: 10px;
-    }
+.imggg{
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+    position: absolute;
+
+
 }
-@media (min-width: 1200px) {
-    .about-image{
-        width: 200px;
-        position: absolute;
-        right: 100px;
+
+.btn1{
+  margin-top: 15px;
+  padding: 12px 28px;
+  background: black;
+  color: #ff6a00;
+  border: solid 1px #ff6a00;
+  cursor: pointer;
+}
+.btn1:hover {
+    background: #ff6a00;
+    color: #ffffff;
+}
+
+@media ( max-width: 430px){
+}
+
+@media ( min-width: 1024px){
+    .imggg{
         margin-top: 20px;
     }
+    .logo{
+        padding: 8px 8%;
+        font-size: 2rem;
+    }
 }
-  
 
 /* SKILLS */
 .skills {
@@ -203,7 +244,8 @@ body {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  overflow: scroll;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
   gap: 35px;
 }
 .projects-grid img:hover {
