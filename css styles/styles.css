@@ -204,7 +204,7 @@ body {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
+  gap: 35px;
 }
 .projects-grid img:hover {
   transform: scale(1.05);
@@ -215,6 +215,7 @@ body {
         display: flex;
         flex-direction: row;
         overflow-x: auto;
+        gap: 45px;
     }
 }
 
