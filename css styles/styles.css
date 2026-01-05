@@ -11,26 +11,17 @@ body {
   line-height: 1.6;
 }
 
-/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px;
   border-bottom: 1px solid #1f1f1f;
-  animation: slideInDown 4s ease-out forwards;
+ 
 }
 
-@keyframes slideInDown {
-  0%{
-    transform: translateX(-400px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+
+
 .navbar span {
   color: whitesmoke;
   font-family: "sacramento", cursive;
@@ -183,7 +174,7 @@ body {
     }
 }
 
-/* SKILLS */
+
 .skills {
   padding: 1px 8%;
 }
@@ -245,7 +236,7 @@ body {
 .projects-grid {
   display: grid;
   overflow: scroll;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 35px;
 }
 .projects-grid img:hover {
